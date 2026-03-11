@@ -10,9 +10,6 @@ const BYPASS_COOKIE = "cf-noredir=true";
 
 export default {
 	async fetch(request) {
-
-		const url = new URL(request.url);
-
 		const userAgent = request.headers.get("user-agent") || "";
 		const cookies = request.headers.get("cookie") || "";
 
